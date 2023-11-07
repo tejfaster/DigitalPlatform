@@ -1,6 +1,8 @@
-const { router } = require("../constant/library");
+const { express } = require("../constant/library");
 const { createProduct, getProduct, updateProduct, deleteProduct, getAllProduct } = require("../controller/productCtrl");
 const { isAdmin, authMiddleware } = require("../middlewares");
+
+const router = express.Router()
 
 router.post("/",authMiddleware,isAdmin,createProduct)
 router.get("/:id",authMiddleware,isAdmin,getProduct)

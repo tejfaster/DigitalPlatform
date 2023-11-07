@@ -14,4 +14,8 @@ const errorHandler = (err,req,res,next) =>{
 }
 
 
-module.exports = {notfound,errorHandler} 
+// no data found
+const noDataFound = (data) => {if(!data) throw new Error("no data found") }   
+
+
+module.exports = {notfound,errorHandler,noDataFound} 

@@ -8,22 +8,24 @@ const morgan = require("morgan")
 const slugify = require("slugify")
 const crypto = require("crypto")
 const nodemailer = require("nodemailer")
+const cors = require("cors")
 
+const app = express()
 const ObjectId = mongoose.Types.ObjectId
-const router = express.Router()
 
 
 module.exports = {
+    app,
     mongoose,
     ObjectId,
     cookie,
     express,
-    router,
     jwt,
     asyncHandler,
     bcrypt,
     morgan,
     slugify,
     crypto,
-    nodemailer
+    nodemailer,
+    cors
 }

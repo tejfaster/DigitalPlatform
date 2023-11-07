@@ -1,6 +1,8 @@
-const { router } = require("../constant/library")
+const { express } = require("../constant/library")
 const { createUser, loginUser, getAlluser, getUser, deletUser, updateUser, un_BlockUser, handleRefreshtoken, logout, updatePassword, forgotPasswordToken, resetPassword, } = require("../controller/userCtrl")
 const { authMiddleware, isAdmin } = require("../middlewares")
+
+const router = express.Router()
 
 router.post('/register',createUser)
 router.post('/forgotpassword',forgotPasswordToken)
